@@ -14,6 +14,7 @@ def rats_detector():
     database = []
 
     def take_photo_and_id(t):
+        # получаем фото и айди из базы данных
         try:
             sqlite_connection = sqlite3.connect('lab_rats.db')
             cursor = sqlite_connection.cursor()
@@ -34,6 +35,7 @@ def rats_detector():
 
 
     def take_id_and_name(t):
+        # получаем айдишники, имена и направления из базы данных
         try:
             sqlite_connection = sqlite3.connect('lab_rats.db')
             cursor = sqlite_connection.cursor()
@@ -53,6 +55,7 @@ def rats_detector():
                 print("Соединение с SQLite закрыто")
 
     def counter(r: list, value) -> int:
+        # счётчик для поиска номера нужного нам элемента в списке
         c = -1
         for i in r:
             if i == value:
@@ -62,11 +65,12 @@ def rats_detector():
                 c += 1
         return(8888)
 
-    ph = take_photo_and_id("f")
-    ids = take_id_and_name("f")
+    ph = take_photo_and_id("f") # получаем айди и фото
+    ids = take_id_and_name("f") # получаем остальную информацию
     rats_id_list = []
     for b in ids:
         rats_id_list.append(b[0])
+    print(ids)
     for o in ph:
         fil = BytesIO(o[0])
         database.append(fil)

@@ -62,7 +62,7 @@ def insert_photo(photo, rat_id):
             sqlite_connection.close()
             print("Соединение с SQLite закрыто")
 
-a = insert_photo("/Users/linaquinzel/Dev/rats_detector/faces_base/1.jpg", 6)
+a = insert_photo("/Users/linaquinzel/Dev/rats_detector/faces_base/19.jpg", 19)
 
 
 
