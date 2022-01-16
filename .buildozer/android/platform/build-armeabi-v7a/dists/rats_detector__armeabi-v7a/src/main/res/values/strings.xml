@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RatsDetector</string>
+    <string name="private_version">5d59d0181b8fa25e760647abaa6c4a48e4a788b9</string>
+    <string name="presplash_color">#000000</string>
+    <string name="urlScheme">kivy</string>
+</resources>
